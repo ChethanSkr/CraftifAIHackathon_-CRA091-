@@ -1,0 +1,585 @@
+{
+  "schema_version": "1.0.0",
+  "view": "sequence",
+  "revision": "2063705a6c00d98bad57e7650a6cf7d2",
+  "graph_version": 2,
+  "generated_at_ms": 1786185108560,
+  "graph": {
+    "schema_version": 1,
+    "id": "pir_sentinel_cabin-sequence",
+    "name": "sentinel_cabin topology — Sequence",
+    "description": "Execution and initialization order",
+    "nodes": [
+      {
+        "id": "boot",
+        "node_type": "system_init",
+        "label": "1. Boot / app_main",
+        "description": "Bootstraps firmware startup and initializes core subsystems.",
+        "ports": [
+          {
+            "id": "boot::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "boot::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "target": "esp32c3"
+        },
+        "execution": {},
+        "visual": {
+          "x": 0.0,
+          "y": 80.0,
+          "layer": 0
+        }
+      },
+      {
+        "id": "app_task",
+        "node_type": "rtos_task",
+        "label": "2. Task app_task",
+        "description": "Executes RTOS loop logic for app_task.",
+        "ports": [
+          {
+            "id": "app_task::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "app_task::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "task_name": "app_task",
+          "priority": 5,
+          "stack_size": 4096,
+          "period_ms": 50.0
+        },
+        "execution": {
+          "priority": 5,
+          "stack_size": 4096,
+          "period_ms": 50.0
+        },
+        "visual": {
+          "x": 320.0,
+          "y": 80.0,
+          "layer": 1
+        }
+      },
+      {
+        "id": "sentinel_classifier",
+        "node_type": "rtos_task",
+        "label": "3. Task sentinel_classifier",
+        "description": "Executes RTOS loop logic for sentinel_classifier.",
+        "ports": [
+          {
+            "id": "sentinel_classifier::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "sentinel_classifier::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "task_name": "sentinel_classifier",
+          "priority": 5,
+          "stack_size": 4096,
+          "period_ms": 0.0
+        },
+        "execution": {
+          "priority": 5,
+          "stack_size": 4096,
+          "period_ms": 0.0
+        },
+        "visual": {
+          "x": 640.0,
+          "y": 80.0,
+          "layer": 2
+        }
+      },
+      {
+        "id": "sentinel_sensor",
+        "node_type": "rtos_task",
+        "label": "4. Task sentinel_sensor",
+        "description": "Executes RTOS loop logic for sentinel_sensor.",
+        "ports": [
+          {
+            "id": "sentinel_sensor::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "sentinel_sensor::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "task_name": "sentinel_sensor",
+          "priority": 5,
+          "stack_size": 3072,
+          "period_ms": 0.0
+        },
+        "execution": {
+          "priority": 5,
+          "stack_size": 3072,
+          "period_ms": 0.0
+        },
+        "visual": {
+          "x": 960.0,
+          "y": 80.0,
+          "layer": 3
+        }
+      },
+      {
+        "id": "logger",
+        "node_type": "logger",
+        "label": "5. Logger",
+        "description": "Emits structured runtime logs for diagnostics.",
+        "ports": [
+          {
+            "id": "logger::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "logger::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "tag": "APP",
+          "level": "info"
+        },
+        "execution": {},
+        "visual": {
+          "x": 1280.0,
+          "y": 80.0,
+          "layer": 4
+        }
+      },
+      {
+        "id": "wifi",
+        "node_type": "wifi_manager",
+        "label": "6. WiFi",
+        "description": "Manages Wi-Fi connectivity for SSID `realme narzo 60 Pro 5G`.",
+        "ports": [
+          {
+            "id": "wifi::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "wifi::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "mode": "station",
+          "ssid": "realme narzo 60 Pro 5G",
+          "password": "12345678"
+        },
+        "execution": {},
+        "visual": {
+          "x": 1600.0,
+          "y": 80.0,
+          "layer": 5
+        }
+      },
+      {
+        "id": "timer_node",
+        "node_type": "timer_node",
+        "label": "7. Timer",
+        "description": "Schedules periodic callbacks for time-based workflow.",
+        "ports": [
+          {
+            "id": "timer_node::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "timer_node::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "timer_name": "periodic_timer",
+          "period_ms": 1000.0,
+          "auto_reload": true
+        },
+        "execution": {
+          "period_ms": 1000.0
+        },
+        "visual": {
+          "x": 1920.0,
+          "y": 80.0,
+          "layer": 6
+        }
+      },
+      {
+        "id": "storage_manager",
+        "node_type": "storage_manager",
+        "label": "8. Storage Manager",
+        "description": "Persists runtime state and configuration data.",
+        "ports": [
+          {
+            "id": "storage_manager::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "storage_manager::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "backend": "nvs",
+          "namespace": "app"
+        },
+        "execution": {},
+        "visual": {
+          "x": 2240.0,
+          "y": 80.0,
+          "layer": 7
+        }
+      },
+      {
+        "id": "led_gpio",
+        "node_type": "gpio_output",
+        "label": "9. LED GPIO (GPIO 8, APP_LED_GPIO)",
+        "description": "Drives GPIO 8 as an output signal.",
+        "ports": [
+          {
+            "id": "led_gpio::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "led_gpio::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "pin": 8
+        },
+        "hardware": {
+          "gpio": 8,
+          "bus": "gpio",
+          "pin_label": "LED GPIO (GPIO 8, APP_LED_GPIO)"
+        },
+        "execution": {},
+        "visual": {
+          "x": 2560.0,
+          "y": 80.0,
+          "layer": 8
+        }
+      },
+      {
+        "id": "mqtt",
+        "node_type": "mqtt_client",
+        "label": "10. MQTT",
+        "description": "Publishes and receives MQTT messages on `esp32/sensor`.",
+        "ports": [
+          {
+            "id": "mqtt::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "mqtt::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "broker_url": "/api/records",
+          "topic": "esp32/sensor",
+          "qos": 0
+        },
+        "execution": {},
+        "visual": {
+          "x": 2880.0,
+          "y": 80.0,
+          "layer": 9
+        }
+      },
+      {
+        "id": "event_handler",
+        "node_type": "event_handler",
+        "label": "11. Event Handler",
+        "description": "Queues and dispatches asynchronous firmware events.",
+        "ports": [
+          {
+            "id": "event_handler::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "event_handler::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "event_base": "ESP_EVENT_ANY_BASE",
+          "event_id": -1
+        },
+        "execution": {},
+        "visual": {
+          "x": 3200.0,
+          "y": 80.0,
+          "layer": 10
+        }
+      },
+      {
+        "id": "trig_gpio",
+        "node_type": "gpio_input",
+        "label": "12. TRIG GPIO (GPIO 4, APP_TRIG_GPIO)",
+        "description": "Reads GPIO 4 as an input signal.",
+        "ports": [
+          {
+            "id": "trig_gpio::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "trig_gpio::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "pin": 4
+        },
+        "hardware": {
+          "gpio": 4,
+          "bus": "gpio",
+          "pin_label": "TRIG GPIO (GPIO 4, APP_TRIG_GPIO)"
+        },
+        "execution": {},
+        "visual": {
+          "x": 3520.0,
+          "y": 80.0,
+          "layer": 11
+        }
+      },
+      {
+        "id": "echo_gpio",
+        "node_type": "gpio_input",
+        "label": "13. ECHO GPIO (GPIO 5, APP_ECHO_GPIO)",
+        "description": "Reads GPIO 5 as an input signal.",
+        "ports": [
+          {
+            "id": "echo_gpio::in",
+            "name": "in",
+            "direction": "input",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          },
+          {
+            "id": "echo_gpio::out",
+            "name": "out",
+            "direction": "output",
+            "datatype": "any",
+            "required": false,
+            "multiplicity": "one"
+          }
+        ],
+        "properties": {
+          "pin": 5
+        },
+        "hardware": {
+          "gpio": 5,
+          "bus": "gpio",
+          "pin_label": "ECHO GPIO (GPIO 5, APP_ECHO_GPIO)"
+        },
+        "execution": {},
+        "visual": {
+          "x": 3840.0,
+          "y": 80.0,
+          "layer": 12
+        }
+      }
+    ],
+    "connections": [
+      [
+        "boot::out",
+        "app_task::in"
+      ],
+      [
+        "boot::out",
+        "sentinel_classifier::in"
+      ],
+      [
+        "boot::out",
+        "sentinel_sensor::in"
+      ],
+      [
+        "boot::out",
+        "logger::in"
+      ],
+      [
+        "boot::out",
+        "wifi::in"
+      ],
+      [
+        "boot::out",
+        "timer_node::in"
+      ],
+      [
+        "boot::out",
+        "storage_manager::in"
+      ],
+      [
+        "app_task::out",
+        "logger::in"
+      ],
+      [
+        "app_task::out",
+        "wifi::in"
+      ],
+      [
+        "app_task::out",
+        "timer_node::in"
+      ],
+      [
+        "app_task::out",
+        "storage_manager::in"
+      ],
+      [
+        "app_task::out",
+        "led_gpio::in"
+      ],
+      [
+        "app_task::out",
+        "mqtt::in"
+      ],
+      [
+        "app_task::out",
+        "event_handler::in"
+      ],
+      [
+        "wifi::out",
+        "mqtt::in"
+      ],
+      [
+        "timer_node::out",
+        "app_task::in"
+      ],
+      [
+        "timer_node::out",
+        "sentinel_classifier::in"
+      ],
+      [
+        "timer_node::out",
+        "sentinel_sensor::in"
+      ],
+      [
+        "timer_node::out",
+        "event_handler::in"
+      ],
+      [
+        "boot::out",
+        "trig_gpio::in"
+      ],
+      [
+        "trig_gpio::out",
+        "echo_gpio::in"
+      ]
+    ],
+    "layout": {
+      "orientation": "horizontal",
+      "node_width": 0.0,
+      "layer_gap": 0.0,
+      "node_gap": 0.0
+    }
+  },
+  "mermaid": "sequenceDiagram\n  participant boot as boot\n  participant sentinel_sensor as sentinel_sensor\n  participant trig_gpio as trig_gpio\n  participant echo_gpio as echo_gpio\n  participant timer_node as timer_node\n  participant sentinel_classifier as sentinel_classifier\n  participant led_gpio as led_gpio\n  participant app_task as app_task\n  participant wifi as wifi\n  participant mqtt as mqtt\n  participant logger as logger\n\n  boot->>logger: init logging\n  boot->>app_task: create/start app_task\n  boot->>sentinel_sensor: sensor_driver_start()\n  sentinel_sensor->>sentinel_sensor: xQueueCreate(1, sizeof(reading))\n  sentinel_sensor->>trig_gpio: gpio_config(TRIG as output), set_level(0)\n  sentinel_sensor->>echo_gpio: gpio_config(ECHO as input)\n\n  loop every APP_SAMPLE_PERIOD_MS\n    sentinel_sensor->>trig_gpio: set_level(1) for 10us then 0\n    sentinel_sensor->>timer_node: esp_timer_get_time() for deadlines\n    sentinel_sensor->>echo_gpio: wait_level(1) then wait_level(0)\n    sentinel_sensor->>sentinel_sensor: compute distance_cm + valid + timestamp\n  end\n\n  sentinel_classifier->>sentinel_sensor: sensor_driver_receive(timeout_ms)\n  sentinel_classifier->>led_gpio: set LED based on classification\n  app_task->>wifi: connect station(ssid/password)\n  app_task->>mqtt: publish record (/api/records)\n  mqtt->>logger: log publish result",
+  "title": "Boot, Sensor Sampling, Classification, and Network Publish"
+}

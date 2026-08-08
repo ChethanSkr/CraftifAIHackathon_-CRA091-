@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['sensor_5fdriver_5freceive_0',['sensor_driver_receive',['../sensor__driver_8c.html#a6d5caa6792a090de050f130ba4eada2d',1,'sensor_driver_receive(sensor_reading_t *reading, uint32_t timeout_ms):&#160;sensor_driver.c'],['../sensor__driver_8h.html#a6d5caa6792a090de050f130ba4eada2d',1,'sensor_driver_receive(sensor_reading_t *reading, uint32_t timeout_ms):&#160;sensor_driver.c']]],
+  ['sensor_5fdriver_5fstart_1',['sensor_driver_start',['../sensor__driver_8c.html#a8d82e956e4cc46b9c1f8632f20449ee5',1,'sensor_driver_start(void):&#160;sensor_driver.c'],['../sensor__driver_8h.html#a8d82e956e4cc46b9c1f8632f20449ee5',1,'sensor_driver_start(void):&#160;sensor_driver.c']]],
+  ['sentinel_5fconfig_5fget_2',['sentinel_config_get',['../sentinel__config_8c.html#a1002707cb052d141c8f2e7ba334a0a3d',1,'sentinel_config_get(sentinel_runtime_config_t *out):&#160;sentinel_config.c'],['../sentinel__config_8h.html#a1002707cb052d141c8f2e7ba334a0a3d',1,'sentinel_config_get(sentinel_runtime_config_t *out):&#160;sentinel_config.c']]],
+  ['sentinel_5fconfig_5finit_3',['sentinel_config_init',['../sentinel__config_8c.html#a8543ddcaf42130acf86c2265669512ae',1,'sentinel_config_init(void):&#160;sentinel_config.c'],['../sentinel__config_8h.html#a8543ddcaf42130acf86c2265669512ae',1,'sentinel_config_init(void):&#160;sentinel_config.c']]],
+  ['sentinel_5fconfig_5fupdate_4',['sentinel_config_update',['../sentinel__config_8c.html#aca92c224aa5f122b6a8a873abf35045f',1,'sentinel_config_update(float t, uint32_t c):&#160;sentinel_config.c'],['../sentinel__config_8h.html#a02840ae8b74607a16e343103b4562efb',1,'sentinel_config_update(float threshold_cm, uint32_t cooldown_seconds):&#160;sentinel_config.c']]],
+  ['status_5',['status',['../web__server_8c.html#a6d0d3cec09cfe31477b194b1005aed0d',1,'web_server.c']]]
+];

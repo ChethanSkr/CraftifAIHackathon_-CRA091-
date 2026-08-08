@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['sensor_5fdriver_2ec_0',['sensor_driver.c',['../sensor__driver_8c.html',1,'']]],
+  ['sensor_5fdriver_2eh_1',['sensor_driver.h',['../sensor__driver_8h.html',1,'']]],
+  ['sensor_5fdriver_5freceive_2',['sensor_driver_receive',['../sensor__driver_8c.html#a6d5caa6792a090de050f130ba4eada2d',1,'sensor_driver_receive(sensor_reading_t *reading, uint32_t timeout_ms):&#160;sensor_driver.c'],['../sensor__driver_8h.html#a6d5caa6792a090de050f130ba4eada2d',1,'sensor_driver_receive(sensor_reading_t *reading, uint32_t timeout_ms):&#160;sensor_driver.c']]],
+  ['sensor_5fdriver_5fstart_3',['sensor_driver_start',['../sensor__driver_8c.html#a8d82e956e4cc46b9c1f8632f20449ee5',1,'sensor_driver_start(void):&#160;sensor_driver.c'],['../sensor__driver_8h.html#a8d82e956e4cc46b9c1f8632f20449ee5',1,'sensor_driver_start(void):&#160;sensor_driver.c']]],
+  ['sensor_5freading_5ft_4',['sensor_reading_t',['../structsensor__reading__t.html',1,'']]],
+  ['sentinel_20—_20cabin_20guardian_5',['Sentinel — Cabin Guardian',['../index.html',1,'']]],
+  ['sentinel_5fcabin_6',['sentinel_cabin',['../dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html#autotoc_md3',1,'']]],
+  ['sentinel_5fconfig_2ec_7',['sentinel_config.c',['../sentinel__config_8c.html',1,'']]],
+  ['sentinel_5fconfig_2eh_8',['sentinel_config.h',['../sentinel__config_8h.html',1,'']]],
+  ['sentinel_5fconfig_5fget_9',['sentinel_config_get',['../sentinel__config_8c.html#a1002707cb052d141c8f2e7ba334a0a3d',1,'sentinel_config_get(sentinel_runtime_config_t *out):&#160;sentinel_config.c'],['../sentinel__config_8h.html#a1002707cb052d141c8f2e7ba334a0a3d',1,'sentinel_config_get(sentinel_runtime_config_t *out):&#160;sentinel_config.c']]],
+  ['sentinel_5fconfig_5finit_10',['sentinel_config_init',['../sentinel__config_8c.html#a8543ddcaf42130acf86c2265669512ae',1,'sentinel_config_init(void):&#160;sentinel_config.c'],['../sentinel__config_8h.html#a8543ddcaf42130acf86c2265669512ae',1,'sentinel_config_init(void):&#160;sentinel_config.c']]],
+  ['sentinel_5fconfig_5fupdate_11',['sentinel_config_update',['../sentinel__config_8c.html#aca92c224aa5f122b6a8a873abf35045f',1,'sentinel_config_update(float t, uint32_t c):&#160;sentinel_config.c'],['../sentinel__config_8h.html#a02840ae8b74607a16e343103b4562efb',1,'sentinel_config_update(float threshold_cm, uint32_t cooldown_seconds):&#160;sentinel_config.c']]],
+  ['sentinel_5fgross_5fmotion_12',['SENTINEL_GROSS_MOTION',['../classifier_8h.html#a48883089759d6e47dea15095e22a5dc4a1ff8d16b5de9c572ccc7f738ac6f6641',1,'classifier.h']]],
+  ['sentinel_5fmicro_5fmotion_13',['SENTINEL_MICRO_MOTION',['../classifier_8h.html#a48883089759d6e47dea15095e22a5dc4a475d5595f39e8f009e390c590ef101ee',1,'classifier.h']]],
+  ['sentinel_5fruntime_5fconfig_5ft_14',['sentinel_runtime_config_t',['../structsentinel__runtime__config__t.html',1,'']]],
+  ['sentinel_5fsnapshot_5ft_15',['sentinel_snapshot_t',['../structsentinel__snapshot__t.html',1,'']]],
+  ['sentinel_5fstate_5ft_16',['sentinel_state_t',['../classifier_8h.html#a48883089759d6e47dea15095e22a5dc4',1,'classifier.h']]],
+  ['sentinel_5fstatic_17',['SENTINEL_STATIC',['../classifier_8h.html#a48883089759d6e47dea15095e22a5dc4a4c44ed65679e49563800308ec3a6e1bb',1,'classifier.h']]],
+  ['snap_18',['snap',['../classifier_8c.html#a11286a5d9cb75deb22c128f72b9eac71',1,'classifier.c']]],
+  ['state_19',['state',['../structsentinel__snapshot__t.html#aaac6f5c25329410e060b4dfe8db90e71',1,'sentinel_snapshot_t']]],
+  ['state_5fage_5fms_20',['state_age_ms',['../structsentinel__snapshot__t.html#af9bcede702552501771831b8d30d3691',1,'sentinel_snapshot_t']]],
+  ['status_21',['status',['../web__server_8c.html#a6d0d3cec09cfe31477b194b1005aed0d',1,'web_server.c']]],
+  ['strip_22',['strip',['../led__controller_8c.html#a4e5c799c49225a274edb124d63826053',1,'led_controller.c']]]
+];

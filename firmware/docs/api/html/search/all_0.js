@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['and_20operation_0',['Configuration and operation',['../index.html#autotoc_md2',1,'']]],
+  ['app_2ec_1',['app.c',['../app_8c.html',1,'']]],
+  ['app_2eh_2',['app.h',['../app_8h.html',1,'']]],
+  ['app_5falert_5fcooldown_5fseconds_3',['APP_ALERT_COOLDOWN_SECONDS',['../app__config_8h.html#a3c706a3c334a8a1b736d393335e4854f',1,'app_config.h']]],
+  ['app_5fconfig_2eh_4',['app_config.h',['../app__config_8h.html',1,'']]],
+  ['app_5fconfirmation_5fsamples_5',['APP_CONFIRMATION_SAMPLES',['../app__config_8h.html#a4450c50c1bdab69fc3278a27a7e09a8d',1,'app_config.h']]],
+  ['app_5fecho_5fgpio_6',['APP_ECHO_GPIO',['../app__config_8h.html#ae4eb7f4d9b138a5b1658b5ee52462d9e',1,'app_config.h']]],
+  ['app_5fecho_5ftimeout_5fus_7',['APP_ECHO_TIMEOUT_US',['../app__config_8h.html#a1348ad7081275a1a8f873387a3af8004',1,'app_config.h']]],
+  ['app_5fevent_5fsize_8',['APP_EVENT_SIZE',['../app__config_8h.html#a4ae99b8445984e6f03f0772aa5519d92',1,'app_config.h']]],
+  ['app_5fgross_5fmotion_5fmultiplier_9',['APP_GROSS_MOTION_MULTIPLIER',['../app__config_8h.html#aa30e128ba4b9439694febdd9f3246edb',1,'app_config.h']]],
+  ['app_5fhistory_5fsize_10',['APP_HISTORY_SIZE',['../app__config_8h.html#af1e1b6f3c6b3f9caa00828362667ca4a',1,'app_config.h']]],
+  ['app_5fled_5fcount_11',['APP_LED_COUNT',['../app__config_8h.html#ae0387fdc7121ab4af1eb125e5f66a1af',1,'app_config.h']]],
+  ['app_5fled_5fgpio_12',['APP_LED_GPIO',['../app__config_8h.html#af75b1114685941b97d36977b8483fa31',1,'app_config.h']]],
+  ['app_5fmotion_5fthreshold_5fcm_13',['APP_MOTION_THRESHOLD_CM',['../app__config_8h.html#a4d623dd765ecd06baf4de9d80c747da5',1,'app_config.h']]],
+  ['app_5fsample_5fperiod_5fms_14',['APP_SAMPLE_PERIOD_MS',['../app__config_8h.html#a0ade8e02cde4eca5903e620a5756cffd',1,'app_config.h']]],
+  ['app_5fstart_15',['app_start',['../app_8c.html#af0c94d79193624994df85c52e2e30ca4',1,'app_start(void):&#160;app.c'],['../app_8h.html#af0c94d79193624994df85c52e2e30ca4',1,'app_start(void):&#160;app.c']]],
+  ['app_5ftrig_5fgpio_16',['APP_TRIG_GPIO',['../app__config_8h.html#a77770617aa8bf1ae077fbcfe21bb813b',1,'app_config.h']]],
+  ['app_5fwifi_5fpassword_17',['APP_WIFI_PASSWORD',['../app__config_8h.html#a4f3f0c8fc3229509808fd24478e7d2d4',1,'app_config.h']]],
+  ['app_5fwifi_5fssid_18',['APP_WIFI_SSID',['../app__config_8h.html#abc82040bba438c5322d13629718d85ca',1,'app_config.h']]],
+  ['app_5fwindow_5fsize_19',['APP_WINDOW_SIZE',['../app__config_8h.html#af33230c0cf9892ba6b4faa3a9df0d783',1,'app_config.h']]],
+  ['array_5fsize_20',['ARRAY_SIZE',['../helpers_8h.html#a25f003de16c08a4888b69f619d70f427',1,'helpers.h']]]
+];
