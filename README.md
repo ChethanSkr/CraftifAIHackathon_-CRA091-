@@ -3,6 +3,7 @@ Below Consists of
 2. Tasks List
 3. Details Doc
 4. Final Layout Overview
+5. Topology
 
 Project : Sentinel — Cabin Guardian
 
@@ -84,6 +85,15 @@ TASKS List
 
 Working Video
 https://github.com/user-attachments/assets/b2b43c0a-bc94-4a77-a17b-8c4668370b4c
+
+Wiring Topology
+<img width="907" height="692" alt="image" src="https://github.com/user-attachments/assets/21cf004d-aee6-47b9-9930-fcdd4454aadb" />
+
+HLD Topology
+<img width="1182" height="707" alt="image" src="https://github.com/user-attachments/assets/7cd90e3a-5514-4648-9983-a2071f7111f8" />
+
+LLD Topology
+<img width="1305" height="701" alt="image" src="https://github.com/user-attachments/assets/c9aabb0b-7760-4e6e-a019-b14a6898081d" />
 
 Details Doc
 [Sentinel_Project_Doc.pdf](https://github.com/user-attachments/files/30855054/Sentinel_Project_Doc.pdf)
