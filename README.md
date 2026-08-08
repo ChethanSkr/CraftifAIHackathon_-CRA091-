@@ -1,64 +1,77 @@
 Project : Sentinel — Cabin Guardian
 
-Non-contact micro-motion & presence monitor for vehicle cabin safety, built on ESP32-C3 with FirmGen v0.3.1.
+Sentinel — Cabin Guardian
+Non-contact micro-motion & presence monitor for vehicle cabin safety, built on ESP32-C3 with FirmGen v0.3.1
 
 Problem
 
-Children and pets die from heatstroke after being left unattended in parked vehicles — usually accidentally, when a distracted caregiver forgets. Existing mitigations (seat-weight sensors, wearables, checklists) require expensive hardware or active compliance, the exact failure mode they're meant to prevent.
+Children/pets die from heatstroke when left unattended in parked vehicles — usually accidental
+Existing fixes (seat-weight sensors, wearables, checklists) need costly hardware or caregiver compliance — the exact failure mode they're meant to prevent
 
 Product Idea
 
-A single ultrasonic sensor continuously classifies activity into three states — STATIC (still), MICRO_MOTION (subtle, e.g. breathing), GROSS_MOTION (rapid movement) — using rolling-window pattern classification, not a single distance threshold. State is shown locally via RGB LED and remotely via a live web dashboard.
+Single ultrasonic sensor classifies activity into three states via rolling-window pattern classification (not a single threshold):
+STATIC — still
+MICRO_MOTION — subtle, e.g. breathing
+GROSS_MOTION — rapid movement
+State shown locally via RGB LED and remotely via live web dashboard
 
 Target Users
 
-Parents/caregivers · pet owners who travel · fleet/rideshare/school-transport operators with duty of care.
+Parents/caregivers of young children
+Pet owners who travel
+Fleet, rideshare, school-transport operators
 
-Generalises To
-Domain	Application
-Automotive	Cargo tamper/shift monitoring in transit
-Automotive	Engine/component vibration health check
-Smart home	Breathing/presence monitor (crib, bedside)
-Industrial	Equipment idle/running/fault classification
-Healthcare	Fall or prolonged-inactivity detection
+Generalizes To (same 3-state core, only thresholds change)
 
-Same STATIC/MICRO_MOTION/GROSS_MOTION core; only thresholds and interpretation change per use case.
+Automotive — cargo tamper/shift monitoring
+Automotive — engine/component vibration health
+Smart home — breathing/presence monitor (crib, bedside)
+Industrial — equipment idle/running/fault classification
+Healthcare — fall or prolonged-inactivity detection
 
 Bill of Materials
 
-ESP32-C3 dev board · HC-SR04 ultrasonic sensor · 1kΩ + 2kΩ resistors (voltage divider) · breadboard · jumper wires · USB cable.
+ESP32-C3 dev board
+HC-SR04 ultrasonic sensor
+1kΩ + 2kΩ resistors (voltage divider)
+Breadboard, jumper wires, USB cable
 
 Wiring
-HC-SR04	Connects To	Notes
-VCC	ESP32 5V	Needs full 5V
-GND	ESP32 GND	Common ground required
-TRIG	GPIO 4	Direct — 3.3V compatible
-ECHO	GPIO 5 (via divider)	5V signal 
+
+VCC → ESP32 5V
+GND → ESP32 GND (common ground required)
+TRIG → GPIO 4
+ECHO → GPIO 5 via divider 
 
 
 Build & Run
-Install ESP-IDF, verify in FirmGen's Toolchain Status.
-Open existing project in FirmGen, confirm board = ESP32-C3.
-Set Wi-Fi SSID/password in app_config.h.
-Review Task List / Firmware Topology, then Deploy → Build, flash & monitor.
-Read device IP from serial monitor, open it in a browser (same Wi-Fi) for the live dashboard.
+
+Install ESP-IDF, verify in FirmGen Toolchain Status
+Open project in FirmGen, confirm board = ESP32-C3
+Set Wi-Fi SSID/password in app_config.h
+Review Task List/Firmware Topology, then Deploy → Build, flash & monitor
+Read device IP from serial monitor, open in browser (same Wi-Fi) for dashboard
+
 Source Layout
+
 sensor_driver/ — triggers HC-SR04, times echo, handles timeouts
 classifier/ — rolling window, variance/delta, debounce/cooldown → state
 led_controller/ — RGB feedback
 web_server/ — dashboard, JSON telemetry, live threshold tuning
-app_config.h — all thresholds, timing, Wi-Fi config, centralized
-
+app_config.h — centralized thresholds, timing, Wi-Fi config
 
 Limitations
-No HTTPS → browser camera capture blocked on mobile
-Thresholds tuned for dev environment; may need retuning (exposed via dashboard sliders)
-Single-point line-of-sight sensing — detects motion pattern, not identity
+
+No HTTPS → camera capture blocked on mobile browsers
+Thresholds tuned for dev environment; may need retuning (dashboard sliders exposed for this)
+Single-point, line-of-sight sensing — detects pattern, not identity
 No MQTT/cloud persistence in this build
 Dashboard needs Wi-Fi; local LED feedback works offline
+
 Dev Process
 
-Built incrementally, each layer verified on hardware before the next: LED blink → RGB control → Web LED control → Ultrasonic + classification → Dashboard chart/log/thresholds → Themed UI.
+Built incrementally, each layer verified on hardware before the next: LED blink → RGB control → Web LED control → Ultrasonic + classification → Dashboard chart/log/thresholds → Themed UI
 
 TASKS List
 <img width="1917" height="1015" alt="Screenshot 2026-08-08 161044" src="https://github.com/user-attachments/assets/a275db9b-bc94-4910-9ca5-11da2ff50e3b" />
