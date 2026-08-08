@@ -1,4 +1,4 @@
-Sentinel — Cabin Guardian
+Project : Sentinel — Cabin Guardian
 
 Non-contact micro-motion & presence monitor for vehicle cabin safety, built on ESP32-C3 with FirmGen v0.3.1.
 
