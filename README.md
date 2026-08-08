@@ -1,3 +1,9 @@
+Below Consists of 
+1. Video
+2. Tasks List
+3. Details Doc
+4. Final Layout Overview
+
 Project : Sentinel — Cabin Guardian
 
 Sentinel — Cabin Guardian
