@@ -79,5 +79,8 @@ TASKS List
 Working Video
 https://github.com/user-attachments/assets/b2b43c0a-bc94-4a77-a17b-8c4668370b4c
 
+Details Doc
+[Sentinel_Project_Doc.pdf](https://github.com/user-attachments/files/30855054/Sentinel_Project_Doc.pdf)
+
 Final Output Screen
 <img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/68b14fae-b000-44ad-b366-b2461f43d026" />
