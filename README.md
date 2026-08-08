@@ -47,11 +47,11 @@ ECHO → GPIO 5 via divider
 
 Build & Run
 
-Install ESP-IDF, verify in FirmGen Toolchain Status
-Open project in FirmGen, confirm board = ESP32-C3
-Set Wi-Fi SSID/password in app_config.h
-Review Task List/Firmware Topology, then Deploy → Build, flash & monitor
-Read device IP from serial monitor, open in browser (same Wi-Fi) for dashboard
+1. Install ESP-IDF, verify in FirmGen Toolchain Status
+2. Open project in FirmGen, confirm board = ESP32-C3
+3. Set Wi-Fi SSID/password in app_config.h
+4. Review Task List/Firmware Topology, then Deploy → Build, flash & monitor
+5. Read device IP from serial monitor, open in browser (same Wi-Fi) for dashboard
 
 Source Layout
 
@@ -63,11 +63,11 @@ app_config.h — centralized thresholds, timing, Wi-Fi config
 
 Limitations
 
-No HTTPS → camera capture blocked on mobile browsers
-Thresholds tuned for dev environment; may need retuning (dashboard sliders exposed for this)
-Single-point, line-of-sight sensing — detects pattern, not identity
-No MQTT/cloud persistence in this build
-Dashboard needs Wi-Fi; local LED feedback works offline
+1. No HTTPS → camera capture blocked on mobile browsers
+2. Thresholds tuned for dev environment; may need retuning (dashboard sliders exposed for this)
+3. Single-point, line-of-sight sensing — detects pattern, not identity
+4. No MQTT/cloud persistence in this build
+5. Dashboard needs Wi-Fi; local LED feedback works offline
 
 Dev Process
 
