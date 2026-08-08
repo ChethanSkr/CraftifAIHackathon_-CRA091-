@@ -4,6 +4,7 @@ Below Consists of
 3. Details Doc
 4. Final Layout Overview
 5. Topology
+6. Chat File
 
 Project : Sentinel — Cabin Guardian
 
